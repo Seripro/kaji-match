@@ -1,6 +1,7 @@
 name = "kaji-match"
 compatibility_date = "2024-05-29"
 main = "src/worker/index.ts"
+account_id = "1ac616ee2c8958f530a169c586cc65d7"
 
 [site]
 bucket = "./dist"
