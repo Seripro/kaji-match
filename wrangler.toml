@@ -1,0 +1,12 @@
+name = "kaji-match"
+compatibility_date = "2024-05-29"
+main = "src/worker/index.ts"
+
+[site]
+bucket = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kaji-match-db"
+database_id = "placeholder-id"
+migrations_dir = "drizzle/migrations"
