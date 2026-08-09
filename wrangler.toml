@@ -8,5 +8,5 @@ bucket = "./dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "kaji-match-db"
-database_id = "placeholder-id"
+database_id = "77bf29f0-4451-4860-93e0-aee63d25082d"
 migrations_dir = "drizzle/migrations"

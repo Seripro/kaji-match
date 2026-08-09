@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/cloudflare-workers";
+import manifest from "__STATIC_CONTENT_MANIFEST";
 import { authRoutes } from "./routes/auth";
 import { groupRoutes } from "./routes/groups";
 import { userRoutes } from "./routes/users";
@@ -22,7 +23,7 @@ app.route("/api/claims", claimRoutes);
 
 app.get("/api/health", (c) => c.json({ status: "ok" }));
 
-app.get("*", serveStatic({ root: "./" }));
-app.get("*", serveStatic({ path: "./index.html" }));
+app.get("*", serveStatic({ root: "./", manifest }));
+app.get("*", serveStatic({ path: "./index.html", manifest }));
 
 export default app;
